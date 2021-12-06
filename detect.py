@@ -158,6 +158,7 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
                         label = '%s %.2f' % (names[int(cls)], conf)
                         plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=1)
                     
+                    save_obj = True
                     if save_obj:
                         for k in range(len(det)):
                             x,y,w,h=int(xyxy[0]), int(xyxy[1]), int(xyxy[2] - xyxy[0]), int(xyxy[3] - xyxy[1])                   
