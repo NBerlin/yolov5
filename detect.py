@@ -169,9 +169,9 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
                             filepath=os.path.join(r'./inference/detection/', filename)
                             cv2.imwrite(filepath, crop_img) 
                             
-            else:
-                print("There is no detected object")
-                continue
+                        else:
+                            print("There is no detected object")
+                            continue
 
             # Print time (inference-only)
             LOGGER.info(f'{s}Done. ({t3 - t2:.3f}s)')
